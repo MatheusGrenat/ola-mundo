@@ -1,10 +1,19 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Inicio from "./paginas/Inicio";
 import SobreMim from "./paginas/SobreMim";
 console.log(window.location)
 
-const pagina = window.location.pathname === '/' ? <Inicio /> : <div><SobreMim /></div>
 function App() {
-  return pagina
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/sobremim" element={<SobreMim />} />
+        <Route path="*" element={<div>Pagina nao encontrada</div>} />
+
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
