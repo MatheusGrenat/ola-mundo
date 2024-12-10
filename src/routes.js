@@ -12,12 +12,12 @@ function AppRoutes() {
       <Menu />
       
       <Routes>
+        
         <Route path="/" element={<PaginaPadrao />}>
-          <Route path="/" element={<Inicio />} />
+          <Route index element={<Inicio />} />
           <Route path="sobremim" element={<SobreMim />} />
         </Route>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/sobremim" element={<SobreMim />} />
+        
         <Route path="*" element={<div>Pagina nao encontrada</div>} />
       </Routes>
 
